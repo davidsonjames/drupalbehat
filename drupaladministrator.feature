@@ -8,3 +8,9 @@ Feature: Drupal Admin Permissions
     Given I am logged in as a user with the "administrator" role
     Given I am on "/node/add"
     Then I should see "Add content"
+
+  @api
+  Scenario: Admin visitor tries to access content overview
+    Given I am logged in as a user with the "administrator" role
+    Given I am on "/admin/content"
+    Then I should see "Content"
